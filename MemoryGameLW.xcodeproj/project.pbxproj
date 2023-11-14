@@ -14,6 +14,9 @@
 		3F9938192B03C8D400C97140 /* MemoryGameLWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9938182B03C8D400C97140 /* MemoryGameLWTests.swift */; };
 		3F9938232B03C8D400C97140 /* MemoryGameLWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9938222B03C8D400C97140 /* MemoryGameLWUITests.swift */; };
 		3F9938252B03C8D400C97140 /* MemoryGameLWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9938242B03C8D400C97140 /* MemoryGameLWUITestsLaunchTests.swift */; };
+		3F9938322B03C93300C97140 /* MotiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9938312B03C93300C97140 /* MotiveButton.swift */; };
+		3F9938342B03C97500C97140 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9938332B03C97500C97140 /* CardView.swift */; };
+		3FE590682B03CB950074D551 /* MemoGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE590672B03CB950074D551 /* MemoGameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		3F99381E2B03C8D400C97140 /* MemoryGameLWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoryGameLWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9938222B03C8D400C97140 /* MemoryGameLWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameLWUITests.swift; sourceTree = "<group>"; };
 		3F9938242B03C8D400C97140 /* MemoryGameLWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameLWUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F9938312B03C93300C97140 /* MotiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotiveButton.swift; sourceTree = "<group>"; };
+		3F9938332B03C97500C97140 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3FE590672B03CB950074D551 /* MemoGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +102,11 @@
 			children = (
 				3F9938072B03C8D300C97140 /* MemoryGameLWApp.swift */,
 				3F9938092B03C8D300C97140 /* ContentView.swift */,
+				3FE590672B03CB950074D551 /* MemoGameModel.swift */,
 				3F99380B2B03C8D400C97140 /* Assets.xcassets */,
 				3F99380D2B03C8D400C97140 /* Preview Content */,
+				3F9938312B03C93300C97140 /* MotiveButton.swift */,
+				3F9938332B03C97500C97140 /* CardView.swift */,
 			);
 			path = MemoryGameLW;
 			sourceTree = "<group>";
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE590682B03CB950074D551 /* MemoGameModel.swift in Sources */,
 				3F99380A2B03C8D300C97140 /* ContentView.swift in Sources */,
 				3F9938082B03C8D300C97140 /* MemoryGameLWApp.swift in Sources */,
+				3F9938342B03C97500C97140 /* CardView.swift in Sources */,
+				3F9938322B03C93300C97140 /* MotiveButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
