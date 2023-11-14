@@ -22,8 +22,7 @@ struct MotiveButton: View {
                 Text(icon)
                 Text(text)
             }
-                }.frame(width: 100, height: 40)
-                    .foregroundColor(color).tint(color).frame(height: 15)
+                }.frame(width: 100, height: 40).frame(height: 15)
     }
 }
 

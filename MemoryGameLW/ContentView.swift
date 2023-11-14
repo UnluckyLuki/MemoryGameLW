@@ -17,26 +17,18 @@ struct ContentView: View {
             ScrollView{
                 cardList.animation(.default, value: viewModel.cards)
             }
-            HStack{
-                //removeCard
-                //Spacer()
-                //addCard
-//                MotiveButton(icon: "🫡", text: "Motyw 1", color: $kolor)
-//                Spacer()
-//                MotiveButton(icon: "🚗", text: "Motyw 2", color: $kolor)
-//                Spacer()
-//                MotiveButton(icon: "🐵", text: "Motyw 3", color: $kolor)
-                
-            }
+            MotivesButton
+                .padding()
         }
         .padding()
-        .foregroundColor(.blue)
+        .foregroundColor(viewModel.MotiveColor)
     }
     
     var cardList : some View{
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 85), spacing: 0)], spacing: 0){
             ForEach(viewModel.cards){
-                card in CardView(card: card)
+                card in 
+                CardView(card: card)
                     .aspectRatio(2/3, contentMode: .fit)
                     .padding(4)
                     .onTapGesture{
@@ -46,26 +38,16 @@ struct ContentView: View {
         }
     }
     
-//    var CardDisplay: some View{
-//        LazyVGrid(columns:[GridItem(.adaptive(minimum:80))]){
-//            ForEach(0..<cardCount, id: \.self){
-//                index in CardView(icon: icons[index], color: kolor).aspectRatio(2/3, contentMode: .fit)
-//            }
-//        }.foregroundColor(kolor)
-//    }
-//    func adjustCardNumber(by_offset: Int, symbol: String) -> some View{
-//        return Button(symbol){
-//            if(by_offset+cardCount >= 0 && by_offset+cardCount <= icons.count){
-//                cardCount += by_offset
-//            }
-//        }.frame(width: 60, height: 40).border(kolor)
-//    }
-//    var addCard: some View{
-//        adjustCardNumber(by_offset: 2, symbol: "+").disabled(cardCount == icons.count)
-//    }
-//    var removeCard: some View{
-//        adjustCardNumber(by_offset: -2, symbol: "-").disabled(cardCount < 2)
-//    }
+    var MotivesButton : some View{
+        HStack{
+            MotiveButton(viewModel: viewModel, icon: "🫡", text: "Motyw 1", color: Color.blue)
+            Spacer()
+            MotiveButton(viewModel: viewModel, icon: "🚗", text: "Motyw 2", color: Color.red)
+            Spacer()
+            MotiveButton(viewModel: viewModel, icon: "🐵", text: "Motyw 3", color: Color.green)
+            
+        }
+    }
 }
 
 
