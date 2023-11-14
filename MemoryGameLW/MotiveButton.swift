@@ -8,20 +8,15 @@
 import SwiftUI
 
 struct MotiveButton: View {
+    
+    @ObservedObject var viewModel: MemoGameViewModel
+    
     var icon: String
     var text: String
-    @Binding var color: Color
+    var color: Color
     var body: some View {
         Button(action: {
-            if(icon == "🫡"){
-                color = .blue
-            }
-            if(icon == "🚗"){
-                color = .red
-            }
-            if(icon == "🐵"){
-                color = .green
-            }
+            viewModel.changeMotive(color: color)
         }){
             VStack{
                 Text(icon)
@@ -33,5 +28,5 @@ struct MotiveButton: View {
 }
 
 #Preview {
-    MotiveButton(icon: "😀", text: "Motyw 1", color: .constant(.blue))
+    MotiveButton(viewModel: MemoGameViewModel(), icon: "☺️", text: "Motive 1", color: Color.blue)
 }
