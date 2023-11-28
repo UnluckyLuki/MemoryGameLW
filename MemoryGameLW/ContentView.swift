@@ -17,6 +17,10 @@ struct ContentView: View {
             ScrollView{
                 cardList.animation(.default, value: viewModel.cards)
             }
+            Button("Shuffle"){
+                viewModel.shuffle()
+            }
+            .padding()
             MotivesButton
                 .padding()
         }

@@ -25,10 +25,10 @@ struct CardView: View {
                     .font(.system(size: 200))
                     .minimumScaleFactor(0.01)
                     .aspectRatio(contentMode: .fit)
-            }.opacity(card.isUp ? 1 : 0)
-            base.fill().opacity(card.isUp ? 0 : 1)
+            }.opacity(card.isFacedUp ? 1 : 0)
+            base.fill().opacity(card.isFacedUp ? 0 : 1)
         }
-        
+        .opacity(card.isFacedUp || !card.isMatched ? 1 : 0)
     }
 }
 

@@ -18,6 +18,8 @@
 		3F9938342B03C97500C97140 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9938332B03C97500C97140 /* CardView.swift */; };
 		3FE590682B03CB950074D551 /* MemoGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE590672B03CB950074D551 /* MemoGameModel.swift */; };
 		3FE5906A2B03CE8F0074D551 /* MemoGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE590692B03CE8F0074D551 /* MemoGameViewModel.swift */; };
+		3FF556562B1644EC00833307 /* CirclePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF556552B1644EC00833307 /* CirclePart.swift */; };
+		3FF556582B164AC300833307 /* TransformIntoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF556572B164AC300833307 /* TransformIntoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		3F9938332B03C97500C97140 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3FE590672B03CB950074D551 /* MemoGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameModel.swift; sourceTree = "<group>"; };
 		3FE590692B03CE8F0074D551 /* MemoGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameViewModel.swift; sourceTree = "<group>"; };
+		3FF556552B1644EC00833307 /* CirclePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePart.swift; sourceTree = "<group>"; };
+		3FF556572B164AC300833307 /* TransformIntoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformIntoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				3FE590692B03CE8F0074D551 /* MemoGameViewModel.swift */,
 				3F9938072B03C8D300C97140 /* MemoryGameLWApp.swift */,
 				3F9938092B03C8D300C97140 /* ContentView.swift */,
+				3FF556552B1644EC00833307 /* CirclePart.swift */,
+				3FF556572B164AC300833307 /* TransformIntoCard.swift */,
 				3FE590672B03CB950074D551 /* MemoGameModel.swift */,
 				3F99380B2B03C8D400C97140 /* Assets.xcassets */,
 				3F99380D2B03C8D400C97140 /* Preview Content */,
@@ -271,6 +277,8 @@
 			files = (
 				3FE590682B03CB950074D551 /* MemoGameModel.swift in Sources */,
 				3F99380A2B03C8D300C97140 /* ContentView.swift in Sources */,
+				3FF556582B164AC300833307 /* TransformIntoCard.swift in Sources */,
+				3FF556562B1644EC00833307 /* CirclePart.swift in Sources */,
 				3FE5906A2B03CE8F0074D551 /* MemoGameViewModel.swift in Sources */,
 				3F9938082B03C8D300C97140 /* MemoryGameLWApp.swift in Sources */,
 				3F9938342B03C97500C97140 /* CardView.swift in Sources */,

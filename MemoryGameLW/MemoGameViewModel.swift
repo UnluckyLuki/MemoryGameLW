@@ -27,14 +27,14 @@ class MemoGameViewModel: ObservableObject {
     }
     
     var cards : Array<MemoGameModel<String>.Card>{
-        return model.cardList
+        return model.cards
     }
     
     func choose(card: MemoGameModel<String>.Card){
         model.choose(card: card)
     }
     
-    func suffle(){
+    func shuffle(){
         model.shuffle()
     }
     
