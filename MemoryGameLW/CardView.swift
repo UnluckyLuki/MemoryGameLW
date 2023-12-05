@@ -15,20 +15,28 @@ struct CardView: View {
         self.card = card
     }
     
+    
     var body: some View {
-        ZStack{
-            let base = RoundedRectangle(cornerRadius: 12)
-            Group{
-                base.fill(.white)
-                base.strokeBorder(lineWidth: 2)
-                Text(card.content)
+        
+        
+        CirclePart(endAngle: .degrees(250))
+            .overlay{Text(card.content)
                     .font(.system(size: 200))
                     .minimumScaleFactor(0.01)
                     .aspectRatio(contentMode: .fit)
-            }.opacity(card.isFacedUp ? 1 : 0)
-            base.fill().opacity(card.isFacedUp ? 0 : 1)
-        }
-        .opacity(card.isFacedUp || !card.isMatched ? 1 : 0)
+                    .padding(5)
+                    .rotationEffect(.degrees(card.isMatched ? 360 : 0))
+                    .animation(.spin(duration: 2), value: card.isMatched)
+            }
+            .padding(4)
+            .transformIntoCard(isFacedUp: card.isFacedUp)
+            .opacity(card.isFacedUp || !card.isMatched ? 1 : 0)
     }
+    
 }
 
+extension Animation {
+    static func spin(duration: TimeInterval) -> Animation {
+        .linear(duration: 2).repeatForever(autoreverses: false)
+    }
+}

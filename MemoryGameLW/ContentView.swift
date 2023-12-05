@@ -13,19 +13,27 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            
             Text("Memo").font(.largeTitle)
             ScrollView{
                 cardList.animation(.default, value: viewModel.cards)
+                    .foregroundColor(viewModel.MotiveColor)
             }
-            Button("Shuffle"){
-                viewModel.shuffle()
+            HStack{
+                Text("Wynik: \(viewModel.points)").font(.system(size: 25))
+                Spacer()
+                Button("Shuffle"){
+                    viewModel.shuffle()
+                }
+                .foregroundColor(viewModel.MotiveColor)
             }
             .padding()
             MotivesButton
+                .foregroundColor(viewModel.MotiveColor)
                 .padding()
         }
         .padding()
-        .foregroundColor(viewModel.MotiveColor)
+        
     }
     
     var cardList : some View{

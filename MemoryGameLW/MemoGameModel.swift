@@ -11,15 +11,12 @@ struct MemoGameModel<CardContent> where CardContent: Equatable
 {
     private(set) var cards: Array<Card>
     
-//    let icons : [String] = ["☺️","🥹","😇","🥳","🤓","🥵","🥶","👻","🎃","🤢"]
-//    let icons2 : [String] = ["🚗","🚕","🚚","🚌","🏎️","🚜","🚑","🛴","🚲","🛵"]
-//    let icons3 : [String] = ["🐶","🐱","🐵","🐭","🦊","🐻","🐦","🐔","🐷","🐼"]
-//    var kolor : Color = .blue
+    public var points: Int
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int)->
          CardContent){
         cards = []
-        
+        points = 0
         for pairIndex in 0..<max(2, numberOfPairsOfCards){
             let content = cardContentFactory(pairIndex)
             cards.append(Card(content: content, id:"\(pairIndex) a"))
@@ -43,6 +40,13 @@ struct MemoGameModel<CardContent> where CardContent: Equatable
                     if cards[cardIndex].content == cards[potentialMatchedIndex].content {
                         cards[cardIndex].isMatched = true
                         cards[potentialMatchedIndex].isMatched = true
+                        points = points + 4
+                    }
+                    if cards[cardIndex].hasBeenSeen{
+                        points = points - 1
+                    }
+                    if cards[potentialMatchedIndex].hasBeenSeen{
+                        points = points - 1
                     }
                 } else {
                     indexOfOneAndOnlyFaceUpCard = cardIndex
@@ -57,9 +61,16 @@ struct MemoGameModel<CardContent> where CardContent: Equatable
     }
     
     struct Card : Equatable, Identifiable{
-        var isFacedUp: Bool = false
+        var isFacedUp = false {
+            didSet {
+                if oldValue && !isFacedUp {
+                    hasBeenSeen = true
+                }
+            }
+         }
         var isMatched: Bool = false
         var content: CardContent
+        var hasBeenSeen: Bool = false
         
         var id: String
     }

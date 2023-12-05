@@ -30,9 +30,16 @@ class MemoGameViewModel: ObservableObject {
         return model.cards
     }
     
+    var points : Int {
+        return model.points
+    }
+    
+    
     func choose(card: MemoGameModel<String>.Card){
         model.choose(card: card)
     }
+    
+    
     
     func shuffle(){
         model.shuffle()
